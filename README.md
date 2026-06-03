@@ -40,13 +40,26 @@ The server communicates with oMLX over HTTP and runs as a local stdio subprocess
 
 ## 3 Installation
 
+### 3.1 From GitHub (no clone required)
+
+Create a virtual environment and install directly from the repository:
+
+```bash
+python3 -m venv /Users/williamwatson/mcp-omlx
+
+/Users/williamwatson/mcp-omlx/bin/pip install \
+  git+https://github.com/William12556/mcp_omlx.git
+```
+
+### 3.2 From a local clone
+
 From the repository root:
 
 ```bash
 pip install -e .
 ```
 
-This installs the package and the `omlx-mcp` console entry point.
+This installs the package in editable mode. Any changes to `server.py` take effect on the next MCP client restart.
 
 [Return to Table of Contents](<#table of contents>)
 
@@ -86,13 +99,13 @@ Detailed tool schemas are in the API reference. See [Documentation](<#7 document
 
 ## 6 Client Registration
 
-Register the server with an MCP client by adding an entry to the client configuration. An example is provided in `mcp.example.json`:
+Register the server with an MCP client by adding an entry to the client configuration. An example is provided in `mcp.example.json`. Use the absolute path to the virtual environment entry point:
 
 ```json
 {
   "mcpServers": {
     "omlx": {
-      "command": "omlx-mcp",
+      "command": "/Users/williamwatson/mcp-omlx/bin/omlx-mcp",
       "env": {
         "OMLX_BASE_URL": "http://127.0.0.1:8000"
       }
@@ -129,6 +142,7 @@ MIT License. See `LICENSE`.
 | Version | Date | Description |
 |---|---|---|
 | 0.1.0 | 2026 June 03 | Initial release. Seven tools: inference, inspection, lifecycle. |
+| 0.1.1 | 2026 June 03 | Added GitHub installation method to README. |
 
 [Return to Table of Contents](<#table of contents>)
 
