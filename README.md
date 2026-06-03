@@ -45,9 +45,9 @@ The server communicates with oMLX over HTTP and runs as a local stdio subprocess
 Create a virtual environment and install directly from the repository:
 
 ```bash
-python3 -m venv /Users/williamwatson/mcp-omlx
+python3 -m venv ~/mcp-omlx
 
-/Users/williamwatson/mcp-omlx/bin/pip install \
+~/mcp-omlx/bin/pip install \
   git+https://github.com/William12556/mcp_omlx.git
 ```
 
