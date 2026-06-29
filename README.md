@@ -105,7 +105,7 @@ Register the server with an MCP client by adding an entry to the client configur
 {
   "mcpServers": {
     "omlx": {
-      "command": "/Users/williamwatson/mcp-omlx/bin/omlx-mcp",
+      "command": "~/mcp-omlx/bin/omlx-mcp",
       "env": {
         "OMLX_BASE_URL": "http://127.0.0.1:8000"
       }
